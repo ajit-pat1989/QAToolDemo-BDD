@@ -1,0 +1,148 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-16T04:58:12.418Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5254261900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.test.qatools.hooks.Hooks.before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "I verify I can save and sort multiple questions and its answers",
+        "description": "",
+        "id": "the-owesome-q/a-tool-features;i-verify-i-can-save-and-sort-multiple-questions-and-its-answers",
+        "after": [
+          {
+            "result": {
+              "duration": 24143500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.test.qatools.hooks.Hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2532007200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I go to QA tool home page",
+            "match": {
+              "location": "com.test.qatools.steps_defination.qatoolsHomePage.QAToolHomePageSteps.i_go_to_qa_tool_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 983553000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter and save the Question and Answer",
+            "match": {
+              "location": "com.test.qatools.steps_defination.qatoolsHomePage.QAToolHomePageSteps.iEnterAndSaveQuestionsAndAnswers(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Question",
+                  "Answer"
+                ]
+              },
+              {
+                "cells": [
+                  "Number of primitive data types in Java are?",
+                  "8"
+                ]
+              },
+              {
+                "cells": [
+                  "What are the primitive data types in java?",
+                  "There are 8 types of primitive data types- int, char, boolean, byte, long, float, short, double."
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 424665600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I verify question and its answers getting saved",
+            "match": {
+              "location": "com.test.qatools.steps_defination.qatoolsHomePage.QAToolHomePageSteps.iVerifyMultipleQuestionAndAnswerSaved(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Question",
+                  "Answer"
+                ]
+              },
+              {
+                "cells": [
+                  "Number of primitive data types in Java are?",
+                  "8"
+                ]
+              },
+              {
+                "cells": [
+                  "What are the primitive data types in java?",
+                  "There are 8 types of primitive data types- int, char, boolean, byte, long, float, short, double."
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 337361600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I verify sorting of Questions working correctly",
+            "match": {
+              "location": "com.test.qatools.steps_defination.qatoolsHomePage.QAToolHomePageSteps.verifySorting()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UI"
+          }
+        ]
+      }
+    ],
+    "name": "The Owesome Q/A tool features",
+    "description": "",
+    "id": "the-owesome-q/a-tool-features",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/QAdemo.feature",
+    "tags": [
+      {
+        "name": "@UI",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

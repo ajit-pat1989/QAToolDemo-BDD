@@ -1,0 +1,32 @@
+#parse("/array.java.vm")
+#if($packageName)
+    package $packageName
+#end##
+
+import io.cucumber.junit.CucumberOptions;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
+import org.junit.ClassRule;
+import org.junit.Rule;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.rules.SpringClassRule;
+import org.springframework.test.context.junit4.rules.SpringMethodRule;
+
+
+@RunWith(CucumberWithSerenity.class)
+@CucumberOptions(
+strict = true,
+features = {"$featureFile"},
+plugin = #stringArray($plugins),
+monochrome = $monochrome,
+#if(!$featureFile.contains(".feature:") && $tags)
+tags = "$tags[0]",
+#end
+glue = #stringArray($glue))
+public class $className {
+@ClassRule
+public static final SpringClassRule SPRING_CLASS_RULE = new SpringClassRule();
+
+@Rule
+public final SpringMethodRule springMethodRule = new SpringMethodRule();
+
+}
